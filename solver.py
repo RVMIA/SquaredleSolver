@@ -85,7 +85,7 @@ def isAdjacent(word):
                 returnedWord = True
             else:
                 return False
-            break
+                break
 
         if puzzleSize == 4:
             if a[i] == '1' and (a[j] == '2' or a[j] == '5' or a[j] == '6'):
@@ -122,7 +122,7 @@ def isAdjacent(word):
                 returnedWord = True
             else:
                 return False
-            break
+                break
 
         if puzzleSize == 5:
             if a[i] == '1' and (a[j] == '2' or a[j] == '6' or a[j] == '7'):
@@ -177,7 +177,7 @@ def isAdjacent(word):
                 returnedWord = True
             else:
                 return False
-            break
+                break
         return returnedWord
 
 
