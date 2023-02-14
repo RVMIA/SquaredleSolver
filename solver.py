@@ -178,7 +178,7 @@ def isAdjacent(word):
             else:
                 return False
                 break
-        return returnedWord
+    return returnedWord
 
 
 words = getDict()
