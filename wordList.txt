@@ -106620,6 +106620,7 @@ outhear
 outheard
 outhearing
 outhears
+outhires
 outhit
 outhits
 outhitting
