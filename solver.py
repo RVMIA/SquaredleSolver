@@ -55,7 +55,7 @@ def printWordList(a):
     print((float(int(1000 * float(len(a)/len(words)))))/10)
 
 def getDict():
-    with open("wordList.txt") as f:
+    with open("wordListLarge.txt") as f:
         return f.read().split()
 
 def isAdjacent(word):
@@ -108,7 +108,7 @@ def isAdjacent(word):
                 returnedWord = True
             elif a[i] == '10' and (a[j] == '5' or a[j] == '6' or a[j] == '7' or a[j] == '9' or a[j] == '11' or a[j] == '13' or a[j] == '14' or a[j] == '15'):
                 returnedWord = True
-            elif a[i] == '11' and (a[j] == '6' or a[j] == '7' or a[j] == '8' or a[j] == '10' or a[j] == '11' or a[j] == '12'):
+            elif a[i] == '11' and (a[j] == '6' or a[j] == '7' or a[j] == '8' or a[j] == '10' or a[j] == '11' or a[j] == '12' or a[j] == '14' or a[j] == '15' or a[j] == '16'):
                 returnedWord = True
             elif a[i] == '12' and (a[j] == '7' or a[j] == '8' or a[j] == '11' or a[j] == '15' or a[j] == '16'):
                 returnedWord = True
@@ -236,7 +236,7 @@ for i in range(len(wordList)):
             wordlist3.append(hasNoDuplicates(word[j]))
     wordlist2.append(wordlist3)
 wordList = wordlist2
-
+finalFinalList = []
 print("done making word list, testing adjacency")
 try:
     for i in range(len(wordList)):
@@ -251,4 +251,9 @@ try:
 except:
     finalList = [*set(finalList)]
     finalList.sort(reverse=True)
-    printWordList(finalList)
+    for i in range(len(finalList)):
+        if len(finalList[i]) <= 4:
+            pass
+        else:
+            finalFinalList.append(finalList[i])
+    printWordList(finalFinalList)
