@@ -252,7 +252,7 @@ except:
     finalList = [*set(finalList)]
     finalList.sort(reverse=True)
     for i in range(len(finalList)):
-        if len(finalList[i]) <= 4:
+        if len(finalList[i]) < 4:
             pass
         else:
             finalFinalList.append(finalList[i])
